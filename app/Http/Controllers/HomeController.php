@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -25,4 +26,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
-}
+
+      /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function list()
+    {  
+        return view('member.members')->with('users', User::all());
+    }
+}  
