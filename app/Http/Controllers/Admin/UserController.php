@@ -62,6 +62,11 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if(Auth::user()->id == $id) {
+            return redirect()->route('admin.users.index')->with('warning', 'Você não pode remover seu próprio usuário!');
+        }
+
+        User::destroy($id);
+        return redirect()->route('admin.users.index')->with('success', 'Usuário removido com sucesso!');
     }
 }

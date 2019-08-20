@@ -46,7 +46,6 @@
                                 <th scope="col">Data de Nascimento</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Ações</th>
-                                <th scope="col"> </th>
                             </tr>
                         </thead>
                         @foreach($users as $user)
@@ -57,15 +56,18 @@
                                 <td>{{ $user->birth }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>
-                                <a class="btn btn-sm btn-info text-white" href="{{route('admin.users.edit', $user->id)}}">
+                                    <a class="btn btn-sm btn-info text-white float-left"
+                                        href="{{route('admin.users.edit', $user->id)}}">
                                         Editar
                                     </a>
+                                    <form action="{{route('admin.users.destroy', $user->id)}}" class="float-left" method="POST">
+                                        @csrf
+                                        {{ method_field('DELETE')}}
+                                        &nbsp;
+                                        <button type="submit" class="btn btn-sm btn-danger">Remover</button>
+                                    </form>
                                 </td>
-                                <td>
-                                    <a class="btn btn-sm btn-danger" href="#">
-                                        Remover
-                                    </a>
-                                </td>
+
                             </tr>
                         </tbody>
                         @endforeach
