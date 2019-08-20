@@ -24,9 +24,12 @@
                 <a class="btn btn-success" href="#">
                     <i class="fas fa-dog"></i>
                     Animais
-                </a>    
+                </a>
+
+                <br><br>
+
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Membros</div>
 
                 <div class="card-body">
                     @if (session('status'))

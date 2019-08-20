@@ -4,29 +4,30 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-                <a class="btn btn-dark" href="{{ url('/home') }}">
-                    <i class="fas fa-chart-line"></i>
-                    Resumo
-                </a>
-    
-                @if(Auth::user()->hasAnyRole('admin'))
-                <a class="btn btn-primary" href="{{ route('admin.users.index') }}">
-                    <i class="fas fa-users"></i>
-                    Membros
-                </a>
-                @else
-                <a class="btn btn-primary" href="/members">
-                    <i class="fas fa-users"></i>
-                    Membros
-                </a>
-                @endif
-    
-                <a class="btn btn-success" href="#">
-                    <i class="fas fa-dog"></i>
-                    Animais
-                </a>
-    
-                <br><br>
+            <a class="btn btn-dark" href="{{ url('/home') }}">
+                <i class="fas fa-chart-line"></i>
+                Resumo
+            </a>
+
+            @if(Auth::user()->hasAnyRole('admin'))
+            <a class="btn btn-primary" href="{{ route('admin.users.index') }}">
+                <i class="fas fa-users"></i>
+                Membros
+            </a>
+            @else
+            <a class="btn btn-primary" href="/members">
+                <i class="fas fa-users"></i>
+                Membros
+            </a>
+            @endif
+
+            <a class="btn btn-success" href="#">
+                <i class="fas fa-dog"></i>
+                Animais
+            </a>
+
+            <br><br>
+
             <div class="card">
                 <div class="card-header">Membros</div>
 
@@ -44,7 +45,8 @@
                                 <th scope="col">Nome</th>
                                 <th scope="col">Data de Nascimento</th>
                                 <th scope="col">Email</th>
-                                <th> </th>
+                                <th scope="col">Ações</th>
+                                <th scope="col"> </th>
                             </tr>
                         </thead>
                         @foreach($users as $user)
@@ -54,6 +56,11 @@
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->birth }}</td>
                                 <td>{{ $user->email }}</td>
+                                <td>
+                                <a class="btn btn-sm btn-info text-white" href="{{route('admin.users.edit', $user->id)}}">
+                                        Editar
+                                    </a>
+                                </td>
                                 <td>
                                     <a class="btn btn-sm btn-danger" href="#">
                                         Remover
@@ -71,4 +78,3 @@
 </div>
 
 @endsection
-

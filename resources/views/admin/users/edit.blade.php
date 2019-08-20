@@ -29,34 +29,32 @@
             <br><br>
 
             <div class="card">
+                <div class="card-header">Editar permissões de {{$user->name}}</div>
 
-                <div class="card-header">Dashboard</div>
                 <div class="card-body">
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
                     </div>
                     @endif
-                    <h3>Seja bem vindx,</h3>
-                    <h5>{{ Auth::user()->name }}</h5>
-                    <br>
-                    <div class="card-deck">
-                        <div class="card border-primary mb-3" style="max-width: 27rem;">
-                            <div class="card-header text-center">TOTAL DE MEMBROS</div>
-                            <div class="card-body text-dark">
-                                <h1 class="text-center">45</h1>
-                            </div>
-                        </div>
-                        <div class="card border-success mb-3" style="max-width: 27rem;">
-                            <div class="card-header text-center">TOTAL DE ANIMAIS</div>
-                            <div class="card-body text-dark">
-                                <h1 class="text-center">45</h1>
-                            </div>
-                        </div>
-                    </div>
+
+                    <form action="{{route('admin.users.update', ['user' => $user->id])}}" method="POST">
+                        @csrf
+                        {{ method_field('PUT')}}
+
+                        @foreach ($roles as $role)
+                        <input type="checkbox" checked data-toggle="toggle" data-onstyle="success" name="roles[]"
+                            value="{{$role->id}}" {{$user->hasAnyRole($role->name)?'checked':''}}> 
+                        <span class="badge badge-success">{{$role->name}}</span>
+                        @endforeach
+                        <br><br>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </form>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection
