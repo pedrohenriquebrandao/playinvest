@@ -29,7 +29,7 @@ class UserController extends Controller
     public function edit($id)
     {
        if(Auth::user()->id == $id) {
-           return redirect()->route('admin.users.index');
+           return redirect()->route('admin.users.index')->with('warning', 'Você não pode editar seu próprio usuário!');
        }
 
        return view('admin.users.edit')->with(['user' => User::find($id), 'roles' => Role::all()]);
@@ -45,13 +45,13 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         if(Auth::user()->id == $id) {
-            return redirect()->route('admin.users.index');
+            return redirect()->route('admin.users.index')->with('warning', 'Você não pode editar seu próprio usuário!');
         }
 
         $user = User::find($id);
         $user->roles()->sync($request->roles);
 
-        return redirect()->route('admin.users.index');
+        return redirect()->route('admin.users.index')->with('success', 'Permissões de usuário atualizadas com sucesso!');
     }
 
     /**

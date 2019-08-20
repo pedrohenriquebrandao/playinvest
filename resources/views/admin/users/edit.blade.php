@@ -43,9 +43,11 @@
                         {{ method_field('PUT')}}
 
                         @foreach ($roles as $role)
-                        <input type="checkbox" checked data-toggle="toggle" data-onstyle="success" name="roles[]"
-                            value="{{$role->id}}" {{$user->hasAnyRole($role->name)?'checked':''}}> 
+                        <div class="form-check">
+                        <input type="checkbox"  name="roles[]"
+                            value="{{$role->id}}" {{$user->hasAnyRole(['admin', 'user'])?'checked':''}}> 
                         <span class="badge badge-success">{{$role->name}}</span>
+                        </div>
                         @endforeach
                         <br><br>
                         <button type="submit" class="btn btn-primary">Salvar</button>
