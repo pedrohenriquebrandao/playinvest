@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->date('birth');
             $table->string('email')->unique();
             $table->string('password');
+            $table->float('balance', 15, 2)->default(1000);
             $table->rememberToken();
             $table->timestamps();
         });

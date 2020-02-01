@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/members', 'HomeController@list')->name('members');
+Route::get('/ranking', 'HomeController@ranking')->name('ranking');
 
 Route::get('/admin', function(){
      return 'you are admin';

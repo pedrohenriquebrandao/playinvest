@@ -36,4 +36,9 @@ class HomeController extends Controller
     {  
         return view('member.members')->with('users', User::all());
     }
+
+    public function ranking()
+    {  
+        return view('member.ranking')->with('users', User::all());
+    }
 }  

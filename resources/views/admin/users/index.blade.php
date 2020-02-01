@@ -5,31 +5,36 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <a class="btn btn-dark" href="{{ url('/home') }}">
-                <i class="fas fa-chart-line"></i>
+                <i class="fas fa-chart-pie"></i>
                 Resumo
             </a>
 
             @if(Auth::user()->hasAnyRole('admin'))
-            <a class="btn btn-primary" href="{{ route('admin.users.index') }}">
+            <a class="btn btn-primary" href="/ranking">
+                <i class="fas fa-chart-line"></i>
+                Ranking
+            </a>
+            <a class="btn btn-success" href="{{ route('admin.users.index') }}">
                 <i class="fas fa-users"></i>
-                Membros
+                Usuários
             </a>
             @else
-            <a class="btn btn-primary" href="/members">
-                <i class="fas fa-users"></i>
-                Membros
+            <a class="btn btn-primary" href="/ranking">
+                <i class="fas fa-chart-line"></i>
+                Ranking
             </a>
+            <i class="btn btn-lg btn-success" style="float: right;">
+                <i class="fas fa-coins"></i>
+                {{ number_format(Auth::user()->balance, 2) }}
+            </i>
+
             @endif
 
-            <a class="btn btn-success" href="#">
-                <i class="fas fa-dog"></i>
-                Animais
-            </a>
 
             <br><br>
 
             <div class="card">
-                <div class="card-header">Membros</div>
+                <div class="card-header">Gerenciamento de usuários</div>
 
                 <div class="card-body">
                     @if (session('status'))

@@ -5,26 +5,30 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <a class="btn btn-dark" href="{{ url('/home') }}">
-                <i class="fas fa-chart-line"></i>
+                <i class="fas fa-chart-pie"></i>
                 Resumo
             </a>
 
             @if(Auth::user()->hasAnyRole('admin'))
-            <a class="btn btn-primary" href="{{ route('admin.users.index') }}">
+            <a class="btn btn-primary" href="/ranking">
+                <i class="fas fa-chart-line"></i>
+                Ranking
+            </a>
+            <a class="btn btn-success" href="{{ route('admin.users.index') }}">
                 <i class="fas fa-users"></i>
-                Membros
+                Usuários
             </a>
             @else
-            <a class="btn btn-primary" href="/members">
-                <i class="fas fa-users"></i>
-                Membros
+            <a class="btn btn-primary" href="/ranking">
+                <i class="fas fa-chart-line"></i>
+                Ranking
             </a>
-            @endif
+            <i class="btn btn-lg btn-success" style="float: right;">
+                <i class="fas fa-coins"></i>
+                {{ number_format(Auth::user()->balance, 2) }}
+            </i>
 
-            <a class="btn btn-success" href="#">
-                <i class="fas fa-dog"></i>
-                Animais
-            </a>
+            @endif
 
             <br><br>
 
@@ -37,23 +41,9 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    <h3>Seja bem vindx,</h3>
-                    <h5>{{ Auth::user()->name }}</h5>
-                    <br>
-                    <div class="card-deck">
-                        <div class="card border-primary mb-3" style="max-width: 27rem;">
-                            <div class="card-header text-center">TOTAL DE MEMBROS</div>
-                            <div class="card-body text-dark">
-                                <h1 class="text-center">45</h1>
-                            </div>
-                        </div>
-                        <div class="card border-success mb-3" style="max-width: 27rem;">
-                            <div class="card-header text-center">TOTAL DE ANIMAIS</div>
-                            <div class="card-body text-dark">
-                                <h1 class="text-center">45</h1>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    Gráfico
+
                 </div>
             </div>
         </div>
