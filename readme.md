@@ -1,1 +1,1 @@
-[img]https://i.ibb.co/wgpHx71/playinvest.png[/img]
+![alt text](https://ibb.co/YQf9qXG)
