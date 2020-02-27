@@ -1,99 +1,193 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+<div class="container">
+    <div class="row justify-content-center">
+        <div data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+            <div class="site-wrap" id="home-section">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="site-mobile-menu site-navbar-target">
+                    <div class="site-mobile-menu-header">
+                        <div class="site-mobile-menu-close mt-3">
+                            <span class="icon-close2 js-menu-toggle"></span>
+                        </div>
+                    </div>
+                    <div class="site-mobile-menu-body"></div>
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+
+                <div class="site-blocks-cover" style="overflow: hidden;">
+                    <div class="container">
+                      <br><br><br>
+                        <div class="container align-items-center justify-content-center">
+
+                            <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+
+                                <img src="images/animation.png" alt="Image" class="img-fluid img-absolute">
+
+                                <div class="row mb-3" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="col-lg-6 mr-auto">
+                                        <h1>Aprenda a investir se divertindo</h1>
+                                        <p class="mb-5">
+                                          Crie partidas e simule aplicações financeiras no mercado de ações 
+                                          desafiando seus amigos a gerar mais rendimentos
+                                        </p>
+                                        <div>
+                                            <a href="#features-section" class="btn btn-warning mr-2 mb-2">Saiba mais</a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+
+                <div class="site-section" id="features-section">
+                    <div class="container">
+                        <div class="row mb-5 justify-content-center text-center" data-aos="fade-up">
+                            <div class="col-7 text-center  mb-5">
+                                <h2 class="section-title">Imagine Features</h2>
+                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quos
+                                    quaerat sapiente nam, id vero.</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-stretch">
+                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+
+                                <div class="unit-4 d-block">
+                                    <div class="unit-4-icon mb-3">
+                                        <span class="icon-wrap"><span class="text-primary icon-autorenew"></span></span>
+                                    </div>
+                                    <div>
+                                        <h3>Marketing Consulting</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                                            molestiae vitae eligendi at.</p>
+                                        <p><a href="#">Learn More</a></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+                                <div class="unit-4 d-block">
+                                    <div class="unit-4-icon mb-3">
+                                        <span class="icon-wrap"><span
+                                                class="text-primary icon-store_mall_directory"></span></span>
+                                    </div>
+                                    <div>
+                                        <h3>Market Analysis</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                                            molestiae vitae eligendi at.</p>
+                                        <p><a href="#">Learn More</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="unit-4 d-block">
+                                    <div class="unit-4-icon mb-3">
+                                        <span class="icon-wrap"><span
+                                                class="text-primary icon-shopping_basket"></span></span>
+                                    </div>
+                                    <div>
+                                        <h3>Easy Purchase</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                                            molestiae vitae eligendi at.</p>
+                                        <p><a href="#">Learn More</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+                                <div class="unit-4 d-block">
+                                    <div class="unit-4-icon mb-3">
+                                        <span class="icon-wrap"><span
+                                                class="text-primary icon-settings_backup_restore"></span></span>
+                                    </div>
+                                    <div>
+                                        <h3>Free Updates</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                                            molestiae vitae eligendi at.</p>
+                                        <p><a href="#">Learn More</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="unit-4 d-block">
+                                    <div class="unit-4-icon mb-3">
+                                        <span class="icon-wrap"><span
+                                                class="text-primary icon-sentiment_satisfied"></span></span>
+                                    </div>
+                                    <div>
+                                        <h3>100% Satistified</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                                            molestiae vitae eligendi at.</p>
+                                        <p><a href="#">Learn More</a></p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="unit-4 d-block">
+                                    <div class="unit-4-icon mb-3">
+                                        <span class="icon-wrap"><span class="text-primary icon-power"></span></span>
+                                    </div>
+                                    <div>
+                                        <h3>Easy Plugin</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                                            molestiae vitae eligendi at.</p>
+                                        <p><a href="#">Learn More</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+               
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="mb-0">
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>
+                                        document.write(new Date().getFullYear());
+
+                                    </script> All rights reserved | This template is made with <i
+                                        class="icon-heart text-danger" aria-hidden="true"></i> by <a
+                                        href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .site-wrap -->
+
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="js/jquery-ui.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/jquery.countdown.min.js"></script>
+            <script src="js/bootstrap-datepicker.min.js"></script>
+            <script src="js/jquery.easing.1.3.js"></script>
+            <script src="js/aos.js"></script>
+            <script src="js/jquery.fancybox.min.js"></script>
+            <script src="js/jquery.sticky.js"></script>
+
+
+            <script src="js/main.js"></script>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+
+@endsection
