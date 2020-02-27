@@ -19,7 +19,7 @@
 
                 <div class="site-blocks-cover" style="overflow: hidden;">
                     <div class="container">
-                      <br><br><br>
+                        <br><br><br>
                         <div class="container align-items-center justify-content-center">
 
                             <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
@@ -30,8 +30,8 @@
                                     <div class="col-lg-6 mr-auto">
                                         <h1>Aprenda a investir se divertindo</h1>
                                         <p class="mb-5">
-                                          Crie partidas e simule aplicações financeiras no mercado de ações 
-                                          desafiando seus amigos a gerar mais rendimentos
+                                            Crie partidas e simule aplicações financeiras no mercado de ações
+                                            desafiando seus amigos a gerar mais rendimentos
                                         </p>
                                         <div>
                                             <a href="#features-section" class="btn btn-warning mr-2 mb-2">Saiba mais</a>
@@ -153,41 +153,39 @@
                     </div>
                 </div>
 
-               
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p class="mb-0">
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;<script>
-                                        document.write(new Date().getFullYear());
 
-                                    </script> All rights reserved | This template is made with <i
-                                        class="icon-heart text-danger" aria-hidden="true"></i> by <a
-                                        href="https://colorlib.com" target="_blank">Colorlib</a>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                </p>
-                            </div>
-                        </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="mb-0">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>
+                                document.write(new Date().getFullYear());
+
+                            </script> All rights reserved. Playinvest 2019 | This template is made with <i class="icon-heart text-danger"
+                                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
                     </div>
                 </div>
-            </div> <!-- .site-wrap -->
-
-            <script src="js/jquery-3.3.1.min.js"></script>
-            <script src="js/jquery-ui.js"></script>
-            <script src="js/popper.min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-            <script src="js/owl.carousel.min.js"></script>
-            <script src="js/jquery.countdown.min.js"></script>
-            <script src="js/bootstrap-datepicker.min.js"></script>
-            <script src="js/jquery.easing.1.3.js"></script>
-            <script src="js/aos.js"></script>
-            <script src="js/jquery.fancybox.min.js"></script>
-            <script src="js/jquery.sticky.js"></script>
-
-
-            <script src="js/main.js"></script>
+            </div>
         </div>
-    </div>
+    </div> <!-- .site-wrap -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+
+
+    <script src="js/main.js"></script>
+</div>
+</div>
 </div>
 
 @endsection

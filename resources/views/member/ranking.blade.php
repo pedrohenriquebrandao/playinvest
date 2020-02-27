@@ -20,11 +20,6 @@
                     Ranking
                 </a>
                 @endif
-    
-                <a class="btn btn-success" href="#">
-                    <i class="fas fa-dog"></i>
-                    Animais
-                </a>
 
                 <br><br>
 
@@ -51,7 +46,7 @@
                             <tr>
                             @if((!$user->hasAnyRole('admin')))
                                 <th scope="row">
-                                    {{ $user->id }}
+                                    {{ $user->id-1 }}
                                 </th>
                                 <td>{{ $user->name }}</td>
                                 <td>$ {{ number_format($user->balance, 2) }} </td>
@@ -66,6 +61,5 @@
         </div>
     </div>
 </div>
-
 @endsection
 
