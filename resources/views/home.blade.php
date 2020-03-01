@@ -4,13 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <a class="btn btn-dark" href="{{ url('/home') }}">
+            <a class="btn btn-warning" href="{{ url('/home') }}">
                 <i class="fas fa-chart-pie"></i>
                 Resumo
             </a>
 
             @if(Auth::user()->hasAnyRole('admin'))
-            <a class="btn btn-primary" href="/ranking">
+            <a class="btn btn-success" href="/ranking">
                 <i class="fas fa-chart-line"></i>
                 Ranking
             </a>
@@ -19,14 +19,16 @@
                 Usuários
             </a>
             @else
-            <a class="btn btn-primary" href="/ranking">
+            <a class="btn btn-success" href="/ranking">
                 <i class="fas fa-chart-line"></i>
                 Ranking
             </a>
-            <i class="btn btn-lg btn-success" style="float: right;">
-                <i class="fas fa-coins"></i>
-                {{ number_format(Auth::user()->balance, 2) }}
-            </i>
+            <a class="btn btn-dark" style="float: right;">
+                <i class="fas fa-coins text-warning"></i>
+                <span class="text-white">{{ number_format(Auth::user()->balance, 2) }}<span>
+            </a>
+            </h5>
+            </a>
 
             @endif
 
@@ -41,7 +43,7 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    
+
                     Gráfico
 
                 </div>
