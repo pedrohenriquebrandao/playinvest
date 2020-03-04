@@ -35,7 +35,6 @@
             <br><br>
 
             <div class="card">
-
                 <div class="card-header">Dashboard</div>
                 <div class="card-body">
                     @if (session('status'))
@@ -43,8 +42,10 @@
                         {{ session('status') }}
                     </div>
                     @endif
-
-                    Gráfico
+                    <h5>Hello, {{ Auth::user()->name }}</h5>
+                    <div class="container">
+                        <a class="btn btn-info btn-block" href="#">Criar partida</a>
+                    </div>
 
                 </div>
             </div>

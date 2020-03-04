@@ -56,9 +56,9 @@
                         @foreach($users->sortByDesc('balance') as $user)
                         <tbody>
                             <tr>
-                            @if((!$user->hasAnyRole('admin')))
+                            @if((!$user->hasAnyRole('admin')))    
                                 <th scope="row">
-                                    {{ $user->id-1 }}
+                                   {{ $loop->iteration }} º
                                 </th>
                                 <td>{{ $user->name }}</td>
                                 <td>$ {{ number_format($user->balance, 2) }} </td>
