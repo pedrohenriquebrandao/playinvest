@@ -42,7 +42,7 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    <h5>Hello, {{ Auth::user()->name }}</h5>
+                    <p class="text-center">{{ Auth::user()->name }}</p>
                     <div class="container">
                         <a class="btn btn-info btn-block" href="#">Criar partida</a>
                     </div>

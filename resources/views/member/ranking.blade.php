@@ -60,8 +60,23 @@
                                 <th scope="row">
                                    {{ $loop->iteration }} º
                                 </th>
-                                <td>{{ $user->name }}</td>
-                                <td>$ {{ number_format($user->balance, 2) }} </td>
+                                <td>
+                                    @if($user->name == Auth::user()->name)
+                                        <strong class="text-primary">
+                                            {{ $user->name }}
+                                        </strong>
+                                    @else
+                                        {{ $user->name }}
+                                    @endif
+                                </td>
+                                <td>
+                                @if( $user->balance == Auth::user()->balance)
+                                    <strong class="text-primary">
+                                        $ {{ number_format($user->balance, 2) }}
+                                    </strong>
+                                @else
+                                    $ {{ number_format($user->balance, 2) }} </td>
+                                @endif
                             </tr>
                             @endif
                         </tbody>
