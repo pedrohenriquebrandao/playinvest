@@ -41,4 +41,9 @@ class HomeController extends Controller
     {  
         return view('member.ranking')->with('users', User::all());
     }
+
+    public function game()
+    {  
+        return view('member.game')->with('users', User::all());
+    }
 }  

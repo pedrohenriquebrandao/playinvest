@@ -4,21 +4,20 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <a class="btn btn-warning" href="{{ url('/home') }}">
-                <i class="fas fa-chart-pie"></i>
-                Resumo
-            </a>
-
             @if(Auth::user()->hasAnyRole('admin'))
             <a class="btn btn-success" href="/ranking">
                 <i class="fas fa-chart-line"></i>
                 Ranking
             </a>
-            <a class="btn btn-success" href="{{ route('admin.users.index') }}">
+            <a class="btn btn-warning" href="{{ route('admin.users.index') }}">
                 <i class="fas fa-users"></i>
                 Usuários
             </a>
             @else
+            <a class="btn btn-warning" href="/home">
+                <i class="fas fa-tachometer-alt"></i>
+                Início
+            </a>
             <a class="btn btn-success" href="/ranking">
                 <i class="fas fa-chart-line"></i>
                 Ranking
@@ -44,7 +43,7 @@
                     @endif
                     <p class="text-center">{{ Auth::user()->name }}</p>
                     <div class="container">
-                        <a class="btn btn-info btn-block" href="#">Criar partida</a>
+                        <a class="btn btn-info btn-block" href=" {{ url('/game') }}">Criar partida</a>
                     </div>
 
                 </div>

@@ -49,13 +49,6 @@
 
                 <div class="site-section" id="features-section">
                     <div class="container">
-                        <div class="row mb-5 justify-content-center text-center" data-aos="fade-up">
-                            <div class="col-7 text-center  mb-5">
-                                <h2 class="section-title">Imagine Features</h2>
-                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quos
-                                    quaerat sapiente nam, id vero.</p>
-                            </div>
-                        </div>
                         <div class="row align-items-stretch">
                             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
 
@@ -64,10 +57,12 @@
                                         <span class="icon-wrap"><span class="text-primary icon-autorenew"></span></span>
                                     </div>
                                     <div>
-                                        <h3>Marketing Consulting</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
-                                            molestiae vitae eligendi at.</p>
-                                        <p><a href="#">Learn More</a></p>
+                                        <h3>Educação para investimentos</h3>
+                                        <p>
+                                            Aprenda quais são os tipos de investimentos
+                                            mais comuns no mercado de investimentos e saiba 
+                                            como fazer aplicações financeiras
+                                        </p> 
                                     </div>
                                 </div>
 
@@ -80,10 +75,10 @@
                                                 class="text-primary icon-store_mall_directory"></span></span>
                                     </div>
                                     <div>
-                                        <h3>Market Analysis</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
-                                            molestiae vitae eligendi at.</p>
-                                        <p><a href="#">Learn More</a></p>
+                                        <h3>Aumente o seu patrimônio</h3>
+                                        <p>Comece com $500 e suba no ranking tomando as melhores 
+                                            decisões e investindo no lugar certo no momento certo     
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -94,61 +89,14 @@
                                                 class="text-primary icon-shopping_basket"></span></span>
                                     </div>
                                     <div>
-                                        <h3>Easy Purchase</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
-                                            molestiae vitae eligendi at.</p>
-                                        <p><a href="#">Learn More</a></p>
+                                        <h3>Aplique no mundo real</h3>
+                                        <p>
+                                            Você terá construído conhecimento suficiente para investir em aplicações financeiras
+                                            reais com seu próprio dinheiro 
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-
-
-                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-                                <div class="unit-4 d-block">
-                                    <div class="unit-4-icon mb-3">
-                                        <span class="icon-wrap"><span
-                                                class="text-primary icon-settings_backup_restore"></span></span>
-                                    </div>
-                                    <div>
-                                        <h3>Free Updates</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
-                                            molestiae vitae eligendi at.</p>
-                                        <p><a href="#">Learn More</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-                                <div class="unit-4 d-block">
-                                    <div class="unit-4-icon mb-3">
-                                        <span class="icon-wrap"><span
-                                                class="text-primary icon-sentiment_satisfied"></span></span>
-                                    </div>
-                                    <div>
-                                        <h3>100% Satistified</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
-                                            molestiae vitae eligendi at.</p>
-                                        <p><a href="#">Learn More</a></p>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                                <div class="unit-4 d-block">
-                                    <div class="unit-4-icon mb-3">
-                                        <span class="icon-wrap"><span class="text-primary icon-power"></span></span>
-                                    </div>
-                                    <div>
-                                        <h3>Easy Plugin</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
-                                            molestiae vitae eligendi at.</p>
-                                        <p><a href="#">Learn More</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>

@@ -116,7 +116,8 @@
         </nav>
 
 
-        <main class="py-4 container">
+        <main class="container">
+            <br>
             @include('partials.alerts')
             @yield('content')
         </main>

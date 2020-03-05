@@ -2,29 +2,61 @@
 
 @section('content')
 <div class="container">
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href= {{asset('css/aos.css')}}>
+
+    <link rel="stylesheet" href="css/style.css">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <a class="btn btn-dark" href="{{ url('/home') }}">
-                <i class="fas fa-chart-line"></i>
-                Resumo
-            </a>
-
             @if(Auth::user()->hasAnyRole('admin'))
-            <a class="btn btn-primary" href="{{ route('admin.users.index') }}">
+            <a class="btn btn-success" href="/ranking">
+                <i class="fas fa-chart-line"></i>
+                Ranking
+            </a>
+            <a class="btn btn-info" href="{{ route('admin.users.index') }}">
                 <i class="fas fa-users"></i>
-                Membros
+                Usuários
             </a>
             @else
-            <a class="btn btn-primary" href="/members">
-                <i class="fas fa-users"></i>
-                Membros
+            <a class="btn btn-success" href="/ranking">
+                <i class="fas fa-chart-line"></i>
+                Ranking
             </a>
-            @endif
+            <a class="btn btn-dark" style="float: right;">
+                <i class="fas fa-coins text-warning"></i>
+                <span class="text-white">{{ number_format(Auth::user()->balance, 2) }}<span>
+            </a>
+            </h5>
+            </a>
 
-            <a class="btn btn-success" href="#">
-                <i class="fas fa-dog"></i>
-                Animais
-            </a>
+            @endif
 
             <br><br>
 

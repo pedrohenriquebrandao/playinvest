@@ -1261,9 +1261,9 @@ h1, h2, h3, h4, h5,
       position: relative;
       border-radius: 50%;
       display: inline-block;
-      background-color: #4285f4;
-      -webkit-box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
-      box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4); }
+      background-color: rgb(243, 230, 51);
+      -webkit-box-shadow: 0 4px 20px -5px rgb(243, 230, 51);
+      box-shadow: 0 4px 20px -5px rgb(243, 230, 51); }
       .unit-4 .unit-4-icon .icon-wrap span {
         font-size: 2rem;
         position: absolute;
@@ -1287,9 +1287,9 @@ h1, h2, h3, h4, h5,
   .unit-4 *:last-child {
     margin-bottom: 0; }
   .unit-4:hover {
-    background: #4285f4;
-    -webkit-box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
-    box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
+    background: rgb(243, 230, 51);
+    -webkit-box-shadow: 0 4px 20px -5px rrgb(243, 230, 51);
+    box-shadow: 0 4px 20px -5px rgb(243, 230, 51);
     top: -7px; }
     .unit-4:hover .icon-wrap {
       background-color: #fff; }

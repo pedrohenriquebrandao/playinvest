@@ -4,29 +4,26 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <a class="btn btn-dark" href="{{ url('/home') }}">
-                <i class="fas fa-chart-pie"></i>
-                Resumo
-            </a>
-
-            @if(Auth::user()->hasAnyRole('admin'))
-            <a class="btn btn-primary" href="/ranking">
+            @if(!Auth::user()->hasAnyRole('admin'))
+            <a class="btn btn-success" href="/ranking">
                 <i class="fas fa-chart-line"></i>
                 Ranking
             </a>
-            <a class="btn btn-success" href="{{ route('admin.users.index') }}">
+            <a class="btn btn-info" href="{{ route('admin.users.index') }}">
                 <i class="fas fa-users"></i>
                 Usuários
             </a>
             @else
-            <a class="btn btn-primary" href="/ranking">
+            <a class="btn btn-success" href="/ranking">
                 <i class="fas fa-chart-line"></i>
                 Ranking
             </a>
-            <i class="btn btn-lg btn-success" style="float: right;">
-                <i class="fas fa-coins"></i>
-                {{ number_format(Auth::user()->balance, 2) }}
-            </i>
+            <a class="btn btn-info" href="{{ route('admin.users.index') }}">
+                <i class="fas fa-users"></i>
+                Usuários
+            </a>
+            </h5>
+            </a>
 
             @endif
 
@@ -47,16 +44,18 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Nome</th>
+                                <th class="w-25">Nome</th>
                                 <th scope="col">Data de Nascimento</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Ações</th>
                             </tr>
                         </thead>
+                       
                         @foreach($users as $user)
                         <tbody>
+                            @if(!$user->hasAnyRole('admin'))
                             <tr>
-                                <th scope="row">{{ $user->id }}</th>
+                                <th scope="row">{{ $user->id-1 }}</th>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->birth }}</td>
                                 <td>{{ $user->email }}</td>
@@ -72,10 +71,11 @@
                                         <button type="submit" class="btn btn-sm btn-danger">Remover</button>
                                     </form>
                                 </td>
-
                             </tr>
+                            @endif
                         </tbody>
                         @endforeach
+                      
                     </table>
 
                 </div>
